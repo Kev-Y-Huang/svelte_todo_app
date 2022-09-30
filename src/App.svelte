@@ -8,8 +8,10 @@
 
   let user;
 
+  // access the auth state to get the current user
   const unsubscribe = authState(auth).subscribe((u) => (user = u));
 
+  // login function using google authentication
   function login() {
     signInWithPopup(auth, googleProvider)
       .then((result) => {

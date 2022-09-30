@@ -3,10 +3,12 @@
 
   const dispatch = createEventDispatcher();
 
+  // Function to dispatch remove action
   function remove() {
     dispatch("remove", { id });
   }
 
+  // Function to dispatch toggle status action
   function toggleStatus() {
     let newStatus = !complete;
     dispatch("toggle", {
@@ -15,6 +17,7 @@
     });
   }
 
+  // props for the component
   export let id; // document ID
   export let text;
   export let complete;
